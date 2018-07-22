@@ -120,7 +120,8 @@ def get_stock_info():
         connection.ping(True)
     d = {}
     cursor = connection.cursor()
-    sql = "SELECT code,market FROM stock_dict "
+    # sql = "SELECT code,market FROM stock_dict "
+    sql = "SELECT * FROM stock_dict A WHERE NOT EXISTS (SELECT * FROM stock_basics B WHERE B.stock_code = A.`code`)"
     cursor.execute(sql)
     info_list = cursor.fetchall()
     connection.close()

@@ -43,6 +43,7 @@ def get_basics(stock_info):
                             totalliab, totsharequi, basiceps, naps, opercashpershare, peropecashpershare, operrevenue,
                             invnetcashflow, finnetcflow, chgexchgchgs, cashnetr, cashequfinbal,createtime)
 
+# get_basics({'code':'600023','market':'sh'})
 
 if __name__ == '__main__':
     stock_info_list = get_stock_info()
